@@ -12,6 +12,9 @@
 		96190E2F1CB5B6110082E761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96190E2D1CB5B6110082E761 /* Main.storyboard */; };
 		96190E311CB5B6110082E761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96190E301CB5B6110082E761 /* Assets.xcassets */; };
 		96190E341CB5B6110082E761 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96190E321CB5B6110082E761 /* LaunchScreen.storyboard */; };
+		96190E3C1CB5B75D0082E761 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96190E3B1CB5B75D0082E761 /* SettingsViewController.swift */; };
+		96190E3E1CB5B8010082E761 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96190E3D1CB5B8010082E761 /* UserInfo.swift */; };
+		96190E401CB7FB600082E761 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96190E3F1CB7FB600082E761 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		96190E301CB5B6110082E761 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96190E331CB5B6110082E761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96190E351CB5B6110082E761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96190E3B1CB5B75D0082E761 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		96190E3D1CB5B8010082E761 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		96190E3F1CB7FB600082E761 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				96190E291CB5B6110082E761 /* AppDelegate.swift */,
+				96190E3D1CB5B8010082E761 /* UserInfo.swift */,
+				96190E3B1CB5B75D0082E761 /* SettingsViewController.swift */,
+				96190E3F1CB7FB600082E761 /* WelcomeViewController.swift */,
 				96190E2B1CB5B6110082E761 /* ViewController.swift */,
 				96190E2D1CB5B6110082E761 /* Main.storyboard */,
 				96190E301CB5B6110082E761 /* Assets.xcassets */,
@@ -96,6 +105,7 @@
 				TargetAttributes = {
 					96190E251CB5B6110082E761 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = KRRQEPB876;
 					};
 				};
 			};
@@ -135,8 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96190E3E1CB5B8010082E761 /* UserInfo.swift in Sources */,
+				96190E401CB7FB600082E761 /* WelcomeViewController.swift in Sources */,
 				96190E2C1CB5B6110082E761 /* ViewController.swift in Sources */,
 				96190E2A1CB5B6110082E761 /* AppDelegate.swift in Sources */,
+				96190E3C1CB5B75D0082E761 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,10 +264,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContactCounter_KathrynRiley/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KatieAnRiley.ContactCounter-KathrynRiley";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -262,10 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContactCounter_KathrynRiley/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KatieAnRiley.ContactCounter-KathrynRiley";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

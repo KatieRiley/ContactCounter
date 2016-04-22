@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContactCounter_KathrynRiley" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,213 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Did you wear your contacts today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GO6-59-78u">
+                                <rect key="frame" x="20" y="28" width="560" height="95"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="31"/>
+                                <color key="textColor" red="0.40784313725490196" green="0.65490196078431373" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6k6-9S-fPm">
+                                <rect key="frame" x="272" y="523" width="57" height="57"/>
+                                <color key="backgroundColor" red="0.81568627450980391" green="0.91764705882352937" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="nCx-XL-Z8U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="15"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.corner">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="o8Q-vG-nKI" kind="showDetail" id="Xkh-bF-29D"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23H-9e-3Ci">
+                                <rect key="frame" x="20" y="421" width="560" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="wvj-bz-fIS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
+                                <color key="textColor" red="0.4823529411764706" green="0.72156862745098038" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PA9-wk-W85">
+                                <rect key="frame" x="216" y="215" width="169" height="169"/>
+                                <color key="backgroundColor" red="0.41176470588235292" green="0.8666666666666667" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="Xza-4t-5rZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="26"/>
+                                <state key="normal" title="You Betcha!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.corner">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="youBetchaButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RzI-G9-bKP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="23H-9e-3Ci" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1Ja-ZL-e6Q"/>
+                            <constraint firstItem="6k6-9S-fPm" firstAttribute="top" secondItem="23H-9e-3Ci" secondAttribute="bottom" constant="4" id="62b-Zf-AFL"/>
+                            <constraint firstAttribute="bottom" secondItem="6k6-9S-fPm" secondAttribute="bottom" constant="20" symbolic="YES" id="6hU-rv-fGr"/>
+                            <constraint firstItem="GO6-59-78u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="DBM-4q-RtA"/>
+                            <constraint firstItem="23H-9e-3Ci" firstAttribute="centerX" secondItem="6k6-9S-fPm" secondAttribute="centerX" id="JsR-P7-86N"/>
+                            <constraint firstItem="PA9-wk-W85" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ULo-ya-0Zk"/>
+                            <constraint firstItem="PA9-wk-W85" firstAttribute="centerX" secondItem="23H-9e-3Ci" secondAttribute="centerX" id="VtM-SX-Piz"/>
+                            <constraint firstItem="23H-9e-3Ci" firstAttribute="top" secondItem="PA9-wk-W85" secondAttribute="bottom" constant="37" id="lEk-Zo-wRQ"/>
+                            <constraint firstItem="23H-9e-3Ci" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nVH-5v-UPk"/>
+                            <constraint firstItem="GO6-59-78u" firstAttribute="centerX" secondItem="PA9-wk-W85" secondAttribute="centerX" id="sw4-Lr-pCh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contactDaysLabel" destination="23H-9e-3Ci" id="to4-3c-yXL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="312"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="J0P-L0-fMk">
+            <objects>
+                <viewController id="ERV-Mb-OCa" customClass="WelcomeViewController" customModule="ContactCounter_KathrynRiley" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CoS-nM-5yw"/>
+                        <viewControllerLayoutGuide type="bottom" id="UyU-Zb-4IV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0nd-fk-VLv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61e-mg-Wmw">
+                                <rect key="frame" x="250" y="480" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.81568627450980391" green="0.91764705882352937" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="34"/>
+                                <state key="normal" title="Set">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.corner">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="setUserInput:" destination="ERV-Mb-OCa" eventType="touchUpInside" id="UeT-Lk-BSK"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="DLH-dl-Xri"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi there and welcome to Contact Counter!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsb-Mp-asJ">
+                                <rect key="frame" x="20" y="28" width="560" height="194"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="36"/>
+                                <color key="textColor" red="0.4823529411764706" green="0.72156862745098038" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="30" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Srz-Yc-8S7">
+                                <rect key="frame" x="249" y="351" width="102" height="30"/>
+                                <color key="textColor" red="0.40784313725490196" green="0.65490196078431373" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How many days do you want to wear one pair of contacts? If left blank the default is 30 days " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1W-e6-A14">
+                                <rect key="frame" x="20" y="223" width="560" height="80"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="23"/>
+                                <color key="textColor" red="0.4823529411764706" green="0.72156862745098038" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="userTextField" destination="Srz-Yc-8S7" id="wgY-ud-wJl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhT-BG-j4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="1063"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Jxj-dX-FzQ">
+            <objects>
+                <viewController id="o8Q-vG-nKI" customClass="SettingsViewController" customModule="ContactCounter_KathrynRiley" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bds-9g-ePt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qcd-ha-7FE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o5K-eH-Oy5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMN-nX-4io">
+                                <rect key="frame" x="20" y="28" width="560" height="152"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="42"/>
+                                <color key="textColor" red="0.4823529411764706" green="0.72156862745098038" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="30" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cg1-VD-yEM">
+                                <rect key="frame" x="200" y="364" width="201" height="30"/>
+                                <color key="textColor" red="0.40784313725490196" green="0.65490196078431373" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOu-CH-eUI">
+                                <rect key="frame" x="100" y="480" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.81568627450980391" green="0.91764705882352937" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="29"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.corner">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="OuA-jp-pSo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How many days do you want to wear one pair of contacts? If left blank the default is 30 days " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPn-o1-Kj7">
+                                <rect key="frame" x="20" y="232" width="560" height="92"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="23"/>
+                                <color key="textColor" red="0.4823529411764706" green="0.72156862745098038" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sv-fu-yPr">
+                                <rect key="frame" x="432" y="480" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.41176470588235292" green="0.8666666666666667" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="23"/>
+                                <state key="normal" title="Set">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.corner">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="userTextField" destination="cg1-VD-yEM" id="aPx-gI-eoH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytg-nC-tOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="312"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OuA-jp-pSo"/>
+    </inferredMetricsTieBreakers>
 </document>

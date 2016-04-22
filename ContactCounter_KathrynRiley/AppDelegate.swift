@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let KEY_FOR_FIRST_TIME = "Key For Bool For First Time Use"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -41,6 +42,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func applicationDidFinishLaunching(application: UIApplication) {
+        let myUserDefaults = NSUserDefaults.standardUserDefaults()
+        
+        if !myUserDefaults.boolForKey(KEY_FOR_FIRST_TIME){
+            myUserDefaults.setBool(false, forKey: KEY_FOR_FIRST_TIME)
+        }
+        
+        myUserDefaults.synchronize()
+    }
 
 }
 
