@@ -18,7 +18,7 @@ class UserInfo: NSObject {
     private let HOW_MANY_DAYS_KEY = "How Many Days Key"
     private let DAYS_WORN_KEY  = "Days Worn Key"
     private let PAIRS_OF_CONTACTS_KEY = "Pairs Of Contacts Key"
-    
+     
     private let userDefaults = NSUserDefaults.standardUserDefaults()
     
     func UserInfo() {

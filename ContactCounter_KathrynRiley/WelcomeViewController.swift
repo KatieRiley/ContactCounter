@@ -24,7 +24,7 @@ class WelcomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+     
     @IBAction func setUserInput(sender: AnyObject) {
         
         if (userTextField.text?.isEmpty == true){

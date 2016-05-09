@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     private let DAYS_WORN_KEY  = "Days Worn Key"
     private let PAIRS_OF_CONTACTS_KEY = "Pairs Of Contacts Key"
 
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
